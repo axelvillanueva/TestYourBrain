@@ -27,7 +27,6 @@
                     </span>
                     @enderror
                 </div>
-
                                   <!--NOMBRE DE USUARIO-->
 
                 <div class="form-group floating-label-form-group controls mx-4">
@@ -63,11 +62,11 @@
                 <div class="form-group">
                 <!--PAÍS-->
                 <div class="form-group floating-label-form-group controls mx-4">
-                  <label for="country" class="font-weight-bold">País:</label>
-                  <select name="country" class="col-lg-12 md-12 xs-12 text-white" style="background: #c44545;">
-                    @foreach (App\User::Paises as $posicion)
+                  <label for="pais" class="font-weight-bold">País:</label>
+                  <select name="pais" class="col-lg-12 md-12 xs-12 text-white" style="background: #c44545;">
+                    @foreach (App\User::Paises as $posicion=>$pais)
                     <option value="{{$posicion}}">
-                      {{$pais>}}
+                      {{$pais}}
                     </option>
                     @endforeach
                   </select>
