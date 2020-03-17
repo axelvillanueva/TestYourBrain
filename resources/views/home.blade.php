@@ -1,14 +1,8 @@
-<header class="row">
-  <div class="col-12 d-flex portada p-0"><img class="w-100" src="img/portada.jpg" alt=""></div>
 
-</header>
-
-  <div class="container-fluid">
-                <!--Barra de navegacion-->
-
-                @extends('layouts.app')
+                @extends('layouts.inicio')
 
                 @section('content')
+
 
 
           <section class="row rounded pt-4">
@@ -40,35 +34,37 @@
             </?php endforeach;?>
 -->
 
-            <div class="container" style="padding-top:7%;margin-bottom: 7%;">
-              <div class="card-deck text-center">
-                <div class="card shadow-sm">
-                  <div class="card-header">
-                    <h4>Estás registrado?</h4>
-                  </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title m-5">Entrá a tu cuenta y Jugá!</h2>
-                    <a class="btn text-white p-3 m3 col-md-10 cBT" style="background-color: crimson;" href="{{ route('login') }}">Ingresar!</a>
-                  </div>
+          <div class="container" style="padding-top:7%;margin-bottom: 7%;">
+            <div class="card-deck text-center">
+              <div class="card shadow-sm">
+                <div class="card-header">
+                  <h4>Estás registrado?</h4>
                 </div>
-                <div class="card shadow-sm">
-                  <div class="card-header" style="padding-bottom: 20px;">
-                    <h4 class="my-0">No estás registrado?</h4>
-                  </div>
-                  <div class="card-body">
-                    <h2 class="card-title pricing-card-title m-5">Creá tu cuenta gratis! </h2>
-                    <a class="btn text-white p-3 mr-3 col-md-12 cBT" style="background-color: crimson;" href="{{ route('register') }}">Registrarse!</a>
-                  </div>
+                <div class="card-body">
+                  <h2 class="card-title pricing-card-title m-5">Entrá a tu cuenta y Jugá!</h2>
+                  <a class="btn text-white p-3 m3 col-md-10 cBT" style="background-color: crimson; font-size:16px;" href="Log-in.php">Ingresar!</a>
+                </div>
+              </div>
+              <div class="card shadow-sm">
+                <div class="card-header" style="padding-bottom: 20px;">
+                  <h4 class="my-0">No estás registrado?</h4>
+                </div>
+                <div class="card-body">
+                  <h2 class="card-title pricing-card-title m-5">Creá tu cuenta gratis! </h2>
+                  <a class="btn text-white p-3 mr-3 col-md-12 cBT" style="background-color: crimson; font-size:16px;" href="Registro.php">Registrarse!</a>
                 </div>
               </div>
             </div>
+          </div>
 
 
           </section>
 
 
 
-      </div>
+
+
+
 
 {{--<div class="container">
     <div class="row justify-content-center">

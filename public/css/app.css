@@ -21,15 +21,6 @@ section{
   background-size: cover;
   background-repeat: no-repeat;
 }
-.enlace-nav:hover{
-  background-color: red;
-  color: white;
-  text-decoration: none;
-  transition: 0.7s;
-  transform: scale(1);
-  opacity: .8;
-  text-transform: uppercase;
-}
 .card-deck{
     margin-right: 0px;
 }
@@ -85,9 +76,11 @@ body{
     border-top: solid 4px;
     border-bottom: solid 4px;
 }
+.dropdown-menu:hover{
+    background-color: red;
+}
 .enlace-nav:hover{
     background-color: red;
-    color: white;
     text-decoration: none;
     transition: 0.7s;
     transform: scale(1);
@@ -98,7 +91,9 @@ body{
     font-size: 18px;
 }
 .dropdown-item:hover{
-  color:black;
+  background:red !important;
+  text-transform: uppercase;
+
 }
 @charset "UTF-8";
 

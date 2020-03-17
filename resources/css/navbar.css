@@ -3,9 +3,11 @@
     border-top: solid 4px;
     border-bottom: solid 4px;
 }
+.dropdown-menu:hover{
+    background-color: red;
+}
 .enlace-nav:hover{
     background-color: red;
-    color: white;
     text-decoration: none;
     transition: 0.7s;
     transform: scale(1);
@@ -14,4 +16,9 @@
   }
 .nav-item{
     font-size: 18px;
+}
+.dropdown-item:hover{
+  background:red !important;
+  text-transform: uppercase;
+
 }

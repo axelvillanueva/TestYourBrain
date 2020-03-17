@@ -111,15 +111,17 @@
                                 </ul>
                                 <div class="nav-item dropdown" style="right:20px;">
                                   <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="desplegable" href="#" style="text-align-last: end; color: white;"> <img src="/storage/{{Auth::user()->avatar!=null?Auth::user()->avatar :img/logo.jpg}}" class="rounded-circle" alt="" style="height: 45px; width:45px;"> </a>
-                                  <div class="dropdown-menu px-3 pt-3 pb-4" style="background: black; right: 0px; left: auto; text-align-last: center; border-left: solid 3px; border-right:solid 3px; border-bottom:solid 3px;">
-                                    <a class="usuario item text-muted">{{Auth::user()->username}} <br> {{Auth::user()->email}} </a>
-                                    <a class="enlace-nav dropdown-item text-white mt-3 pt-3" style="border-top: red solid 1px;" href="/perfil">Perfil</a>
-                                    <a class="dropdown-item text-white" href="{{ route('logout') }}"
+                                  <div class="dropdown-menu px-3 py-3 text-center" style="background: black; right: 0px; left: auto; text-align-last: center; border-left: solid 3px; border-right:solid 3px; border-bottom:solid 3px;">
+                                    <a class="usuario item text-muted">{{Auth::user()->username}}</a>
+                                    <a class="usuario item text-muted pb-3" style="border-bottom: red solid 1px;">{{Auth::user()->email}}</a>
+                                    <div class="mt-4">
+                                      <a class="dropdown-item text-white" href="/perfil">Perfil</a>
+                                      <a class="dropdown-item text-white" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         Cerrar sesión {{--{{ __('Logout') }}--}}
-                                    </a>
-
+                                      </a>
+                                    </div>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
@@ -129,10 +131,6 @@
                               </div>
                             </nav>
                         @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
 
         <main class="py-4">
             @yield('content')
