@@ -60,6 +60,20 @@
                     @enderror
                 </div>
 
+                <div class="form-group">
+                <!--PAÍS-->
+                <div class="form-group floating-label-form-group controls mx-4">
+                  <label for="country" class="font-weight-bold">País:</label>
+                  <select name="country" class="col-lg-12 md-12 xs-12 text-white" style="background: #c44545;">
+                    @foreach (App\User::Paises as $posicion)
+                    <option value="{{$posicion}}">
+                      {{$pais>}}
+                    </option>
+                    @endforeach
+                  </select>
+                </div>
+              </div>
+
                                       <!--CONTRASEÑA-->
 
                 <div class="form-group floating-label-form-group controls mx-4">
