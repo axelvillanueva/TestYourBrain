@@ -9,6 +9,11 @@ use App\Pregunta;
 class Categoria extends Model
 {
   protected $guarded = [];
+  
+  public function getNombreSinEspacios()
+  {
+    return str_replace(' ', '', $this->nombre);
+  }
 
   public function preguntas()
   {

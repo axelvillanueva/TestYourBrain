@@ -10,29 +10,29 @@
               <h1 class="col-md-6 col-xs-12 py-3 mt-5" style="color:white; font-family: serif; font-size: 3em;font-weight:bold; background:crimson; opacity:90%">Demuestra tu conocimiento</h1>
               <hr class="col-7 border">
             </article>
-<!--            </?php foreach ($results as $result): ?>
+            @foreach (App\Categoria::all() as $categoria)
 
-            <div class="col-sm-6 col-md-4 p-5 d-flex"><a href="#" data-toggle="modal" data-target="#</?=$result->getNombreSinEspacios()?>Modal" class="w-100"><img class="img-fluid rounded w-100 h-100 img-hov" src="</?=$result->getImagen()?>" alt="" style="box-shadow: 10px 10px 6px -6px #777;"></a></div>
+            <div class="col-sm-6 col-md-4 p-5 d-flex"><a href="#" data-toggle="modal" data-target="#{{$categoria->getNombreSinEspacios()}}Modal" class="w-100"><img class="img-fluid rounded w-100 h-100 img-hov" src="{{$categoria->imagen}}" alt="" style="box-shadow: 10px 10px 6px -6px #777;"></a></div>
 
-            <div class="modal fade" id="</?=$result->getNombreSinEspacios()?>Modal" tabindex="-1" role="dialog" aria-labelledby="</?=$result->getNombreSinEspacios()?>ModalTitle" aria-hidden="true">
+            <div class="modal fade" id="{{$categoria->getNombreSinEspacios()}}Modal" tabindex="-1" role="dialog" aria-labelledby="{{$categoria->getNombreSinEspacios()}}ModalTitle" aria-hidden="true">
                 <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
                   <div class="modal-content bg-dark text-white">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="</?=$result->getNombreSinEspacios()?>ModalTitle"></?=$result->getNombre()?></h5>
+                      <h5 class="modal-title" id="{{$categoria->getNombreSinEspacios()}}ModalTitle">{{$categoria->nombre}}</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
                     </div>
-                    <img class="img-fluid rounded mx-1" src="</?=$result->getImagen()?>" alt="">
+                    <img class="img-fluid rounded mx-1" src="{{$categoria->imagen}}" alt="">
                     <div class="modal-body">
-                      </?=$result->getDescripcion()?>
+                      {{$categoria->descripcion}}
                     </div>
                   </div>
                 </div>
               </div>
 
-            </?php endforeach;?>
--->
+            @endforeach
+
 
           <div class="container" style="padding-top:7%;margin-bottom: 7%;">
             <div class="card-deck text-center">
