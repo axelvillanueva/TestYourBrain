@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);body{
-  background: url(/images/bg-80.jpg?402a471b5aad190a33b649f1368f5de1) fixed center top;
+  background: url(/images/fondo.jpg?402a471b5aad190a33b649f1368f5de1) fixed center top;
   background-size: cover;
   font-family: sans-serif;
   padding-bottom: 65px;
@@ -34,7 +34,7 @@ section{
   transform: scale(1.2);
 }
 body{
-  background: url(/images/bg-80.jpg?402a471b5aad190a33b649f1368f5de1) fixed center top;
+  background: url(/images/fondo.jpg) fixed center top;
   background-size: cover;
   padding-bottom: 60px;
 }
@@ -53,7 +53,7 @@ body{
   font-weight: bold;
 }
 body{
-  background: url(/images/bg-80.jpg?402a471b5aad190a33b649f1368f5de1) fixed center top;
+  background: url(/images/fondo.jpg) fixed center top;
   background-size: cover;
 }
   .formulario-registro input[type="text"],

@@ -28,6 +28,7 @@
             @guest
               <div class="col-12 p-0">
                 <nav  id="barraN" class="col-12 barra-busqueda navbar navbar-expand-lg navbar-dark p-0 ">
+                <a class="" href="/home"><img class="rounded-circle" src="images/logo.png" alt="logotipo" width="100px"></a>
                 <a class="navbar-brand mb-0 mx-5 text-white" style="font-size: 30px;">Bienvenido</a>
                 <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
                   <span class="navbar-toggler-icon"></span>
@@ -54,6 +55,7 @@
           @else
             <div class="col-12 p-0">
               <nav  id="barraN" class="col-12 barra-busqueda navbar navbar-expand-lg navbar-dark p-0 justify-content-center">
+              <a class="" href="/home"><img class="rounded-circle" src="images/Logo.png" alt="logotipo" width="135px"></a>
                 <a class="navbar-brand mb-0 mx-5 text-white" style="font-size: 30px;">Bienvenido</a>
                 <button class="navbar-toggler" data-target="#menu" data-toggle="collapse" type="button">
                   <span class="navbar-toggler-icon"></span>
