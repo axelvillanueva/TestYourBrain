@@ -38,7 +38,7 @@ class SeederDePreguntas extends Seeder
       $preguntaCuatroDeportes = DB::table("preguntas")->insert(
         [
           "id" => 4,
-          "detalle" => "¿Cuál de estos pilotos ganó más campeonatos del mundo en la Fórmula 1?",
+          "detalle" => "¿Cuál de estos pilotos ganó más campeonatos del mundo en la Fórmula 1?(2020)",
           "categoria_id" => 1
         ]
       );
