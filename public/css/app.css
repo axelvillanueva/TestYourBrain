@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);body{
-  background: url(/images/fondo.jpg?402a471b5aad190a33b649f1368f5de1) fixed center top;
+  background: url(/images/fondo.jpg) fixed center top;
   background-size: cover;
   font-family: sans-serif;
   padding-bottom: 65px;

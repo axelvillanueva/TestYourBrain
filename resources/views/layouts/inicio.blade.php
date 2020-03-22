@@ -74,7 +74,7 @@
 
                   </ul>
                   <div class="nav-item dropdown" style="right:20px;">
-                    <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="desplegable" href="#" style="text-align-last: end; color: white;"> <img src="{{Auth::user()->avatar!='no tiene'?'/storage/'.Auth::user()->avatar:'img/logo.jpg'}}" class="rounded-circle" alt="" style="height: 45px; width:45px;"> </a>
+                    <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="desplegable" href="#" style="text-align-last: end; color: white;"> <img src="{{Auth::user()->avatar!='no tiene'?'/storage/'.Auth::user()->avatar:'images/usuariodefault.png'}}" class="rounded-circle" alt="" style="height: 45px; width:45px;"> </a>
                     <div class="dropdown-menu px-3 py-3 text-center" style="background: black; right: 0px; left: auto; text-align-last: center; border-left: solid 3px; border-right:solid 3px; border-bottom:solid 3px;">
                       <a class="usuario item text-muted">{{Auth::user()->username}}</a>
                       <a class="usuario item text-muted pb-3" style="border-bottom: red solid 1px;">{{Auth::user()->email}}</a>
@@ -101,6 +101,31 @@
         <main class="py-4">
             @yield('content')
         </main>
+
+        <!-- Pie de pagina -->
+
+        <footer class="position-absolute col-11 mt-4 mb-2">
+             <nav id="black" class="navbar mt-5" style="height: 60px;">
+                 <div class="ml-5 mb-2">
+                 <a class="position-relative ml-5"  style="bottom: 15%;" href="/home"><img class="rounded-circle" src="../images/Logo.png" alt="logotipo" width="90px"></a>
+                 <h6 class="font-italic position-relative text-white" style="margin-right: auto;"> &copy 2020 Derechos reservados.</h6>
+               </div>
+                 <ul class="nav  justify-content-end">
+                     <li class="nav-item float-right">
+                         <a class="nav-link position-relative" style="bottom: 15%;" href="https://es-la.facebook.com/" target="_black"><img class="border border-primary rounded-circle" src="img/icono-facebook.png" alt="logo-facebook" width="40px"></a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link position-relative" style="bottom: 15%;" href="https://twitter.com/login?lang=es" target="_black"><img class="border border-primary rounded-circle" src="img/icono-twitter.png" alt="logo-twitter" width="40px"></a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link position-relative" style="bottom: 15%;" href="https://www.instagram.com/?hl=es-la" target="_black"><img class="border border-primary rounded-circle" src="img/icono-instagram.png" alt="logo-instagram" width="40px"></a>
+                     </li>
+                     <li class="nav-item">
+                         <a class="nav-link position-relative" style="bottom: 15%;" href="https://www.youtube.com/?gl=AR&hl=es-419" target="_black"><img class="border border-danger rounded-circle" src="img/icono-youtube.png" alt="logo-youtub" width="40px"></a>
+                     </li>
+                 </ul>
+             </nav>
+         </footer>
     </div>
 </body>
 </html>

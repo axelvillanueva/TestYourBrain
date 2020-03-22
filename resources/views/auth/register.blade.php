@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="px-5 mx-4 mb-5">
+<div class="px-5 mx-4">
     <section class="row justify-content-center contenedor-formulario pt-5">
         <div class="col-lg-6 col-md-8 border border-dark text-white formulario-registro mx-auto"
             style="background:rgba(186, 59, 59, 0.60);">
@@ -93,7 +93,7 @@
 
                 <div class="form-group floating-label-form-group controls mx-4">
                     <label for="password-confirm"
-                    class="font-weight-bold">{{ __('Confirmar Password') }}</label>
+                    class="font-weight-bold">{{ __('Confirmar contraseña') }}</label>
 
                         <input id="password-confirm" type="password" class="w-100 mb-1 form-control form-control" name="password_confirmation"
                             required autocomplete="new-password" placeholder="Vuelva a escribir la contraseña">

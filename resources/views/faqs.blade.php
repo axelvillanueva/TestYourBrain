@@ -66,26 +66,8 @@
 
         </div>
       </div>
-      <!-- Pie de pagina -->
-      <footer >
-           <nav id="black" class="navbar mt-5 fixed-bottom" style="height: 60px;">
-               <h6 class="font-italic position-relative text-white" style="bottom: 15%;"><a class="" href="INICIO.php"><img class="rounded-circle" src="img/logo.jpg" alt="logotipo" width="60px"></a>  &copy 2020 Derechos reservados.</h6>
-               <ul class="nav  justify-content-end">
-                   <li class="nav-item float-right">
-                       <a class="nav-link position-relative" style="bottom: 15%;" href="https://es-la.facebook.com/" target="_black"><img class="border border-primary rounded-circle" src="img/icono-facebook.png" alt="logo-facebook" width="40px"></a>
-                   </li>
-                   <li class="nav-item">
-                       <a class="nav-link position-relative" style="bottom: 15%;" href="https://twitter.com/login?lang=es" target="_black"><img class="border border-primary rounded-circle" src="img/icono-twitter.png" alt="logo-twitter" width="40px"></a>
-                   </li>
-                   <li class="nav-item">
-                       <a class="nav-link position-relative" style="bottom: 15%;" href="https://www.instagram.com/?hl=es-la" target="_black"><img class="border border-primary rounded-circle" src="img/icono-instagram.png" alt="logo-instagram" width="40px"></a>
-                   </li>
-                   <li class="nav-item">
-                       <a class="nav-link position-relative" style="bottom: 15%;" href="https://www.youtube.com/?gl=AR&hl=es-419" target="_black"><img class="border border-danger rounded-circle" src="img/icono-youtube.png" alt="logo-youtub" width="40px"></a>
-                   </li>
-               </ul>
-           </nav>
-       </footer>
+
+
      </div>
 </body>
 </html>
