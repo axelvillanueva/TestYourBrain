@@ -10,7 +10,7 @@
                 src="{{ asset('img/logo.jpg') }}" alt="logo de ejemplo"
                 style="width: 120px; top: -50px; left: calc(50% - 50px);">
             <h2 class="text-center pt-4 mt-5">Registrarse</h2>
-            <form method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
+            <form id="formulario" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
                 @csrf
                                     <!--NOMBRE-->
 
