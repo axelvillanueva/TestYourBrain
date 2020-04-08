@@ -55,6 +55,7 @@ class RegisterController extends Controller
              'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
              'password' => ['required', 'string', 'min:8', 'confirmed'],
              'pais' => [],
+             'provincia' => [],
              'avatar' => ['image'],
          ]);
      }
@@ -75,12 +76,18 @@ class RegisterController extends Controller
          $nombreArchivo = "no tiene";
        }
 
+       if(isset($data['provincia'])) {
+         $provincia = $data['provincia'];
+       } else {
+         $provincia = NULL;
+       }
 
          return User::create([
              'name' => $data['name'],
              'username' => $data['username'],
              'email' => $data['email'],
-             'pais' =>$data['pais'],
+             'pais' => $data['pais'], 
+             'provincia' => $provincia,
              'password' => Hash::make($data['password']),
              'avatar' => $nombreArchivo
          ]);

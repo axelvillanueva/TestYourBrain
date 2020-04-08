@@ -49597,7 +49597,139 @@ $(document).ready(function () {
       mostrarCantRespuestas();
     }
   });
-});
+}); // Captura de los elementos del form
+
+var formulario = document.querySelector('#formulario');
+var elementosFormulario = formulario.elements;
+var Nombre = elementosFormulario[1];
+var Usuario = elementosFormulario[2];
+var Email = elementosFormulario[3];
+var Pais = elementosFormulario[4];
+var Provincia = elementosFormulario[5];
+var Password = elementosFormulario[6];
+var ConfirmPass = elementosFormulario[7];
+var Imagen = elementosFormulario[8];
+var formatoEmail = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+var formatoImagen = /(.png|.PNG|.jpg|.JPG|)$/i; //  Validacion de los campos del formulario
+
+Nombre.onchange = function () {
+  if (this.value.trim().length < 3) {
+    alert('El nombre debe tener 3 o mas caracteres');
+  }
+};
+
+Usuario.onchange = function () {
+  if (this.value.trim().length < 3) {
+    alert('El usuario debe tener 3 o mas caracteres');
+  }
+};
+
+Email.onchange = function () {
+  if (!formatoEmail.test(this.value)) {
+    alert('El formato del email es invalido');
+  }
+};
+
+Password.onchange = function () {
+  if (this.value.trim().length < 8) {
+    alert('La Contraseña debe tener minimo 8 caracteres');
+  }
+};
+
+ConfirmPass.onchange = function () {
+  if (this.value.trim() < 8) {
+    alert('La Contraseña debe tener 3 o mas caracteres');
+  } else if (this.value.trim() != Password.value) alert('Las Contraseñas no coinciden');
+}; //  Validacion al enviar el formulario
+
+
+formulario.onsubmit = function (event) {
+  if (Nombre.value.trim() == "") {
+    alert('Ingrese un Nombre');
+    event.preventDefault();
+  } else if (Usuario.value.trim() == "") {
+    alert('El campo Usuario es obligatorio');
+    event.preventDefault();
+  } else if (Email.value.trim() == "") {
+    alert('Ingrese un Email');
+    event.preventDefault();
+  } else if (Pais.value.trim() == "") {
+    alert('El campo Pais es obligatorio');
+    event.preventDefault();
+  } else if (Password.value.trim() == "") {
+    alert('Ingrese una Contraseña');
+    event.preventDefault();
+  } else if (ConfirmPass.value.trim() == "") {
+    alert('Confirme su Contraseña');
+    event.preventDefault();
+  } else if (Imagen.value == "") {
+    alert('Ingresar una imagen es obligatorio');
+    event.preventDefault();
+  }
+}; // Implementacion de API para  paises
+
+
+fetch('http://pilote.techo.org/?do=api.getPaises').then(function (response) {
+  return response.json();
+}).then(function (paises) {
+  for (pais in paises.contenido) {
+    var option = document.createElement('option');
+    var optionText = document.createTextNode(pais);
+    option.append(optionText);
+    Pais.append(option);
+  }
+})["catch"](function (error) {
+  console.error(error);
+}); // Implementacion de apis provincias
+
+Provincia.style.display = 'none';
+
+Pais.onchange = function () {
+  if (Pais.value == "Argentina") {
+    Provincia.style.display = 'block';
+    fetch('https://apis.datos.gob.ar/georef/api/provincias').then(function (response) {
+      return response.json();
+    }).then(function (provincias) {
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        for (var _iterator = provincias.provincias[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var data = _step.value;
+          var option = document.createElement('option');
+          var optionText = document.createTextNode(data.nombre);
+          option.append(optionText);
+          var provinciaDoc = document.getElementById('provincia');
+          provinciaDoc.append(option);
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+            _iterator["return"]();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
+    });
+  } else {
+    Provincia.style.display = 'none';
+  }
+}; //boton Modo nocturno
+
+
+var btnSwitch = document.getElementById("switch");
+
+btnSwitch.onclick = function () {
+  document.body.classList.toggle('dark');
+  btnSwitch.classList.toggle('active');
+};
 
 /***/ }),
 
@@ -49733,8 +49865,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\pc\Documents\Laravel\TYB\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Users\pc\Documents\Laravel\TYB\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\aseli\Desktop\PROYECTO-TYB\TYB\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\aseli\Desktop\PROYECTO-TYB\TYB\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
