@@ -24,5 +24,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/faqs', 'PreguntasController@faqs');
+Route::get('/faqs', 'QuestionsController@faqs');
 Route::get('/perfil', 'UserController@perfil');
+Route::post('/puntuaciones', 'QuestionsController@guardarPuntuacion');
+Route::get('/userStats', 'UserController@traerStats');
+Route::get('/ranking', 'UserController@ranking');
+Route::post('/respondidas', 'QuestionsController@guardarRespondidas');

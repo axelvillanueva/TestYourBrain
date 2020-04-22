@@ -60,3 +60,12 @@
   right: 0;
   margin-right: 10px;
 }
+
+body {
+  transition: .8s ease all;
+}
+
+body.dark{
+  background: url(/images/fondoDark.jpg) fixed center top;
+  background-size: cover;
+}
